@@ -5808,7 +5808,8 @@ button.close {
   line-height: 50px;
   color: #999;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: bold;
 }
 .dropdown-menu > li > a:hover {
   background: #1f252b;
@@ -5835,27 +5836,34 @@ button.close {
     background-image: url(../img/logo@2x.png);
   }
 }
+.page-child .navbar-default .navbar-nav > li > a,
+.page .navbar-default .navbar-nav > li > a {
+  color: #BBB;
+}
+.page.home .navbar-default .navbar-nav > li > a {
+  color: #888;
+}
 .navbar-nav {
   float: right;
-  font-size: 15px;
 }
 .navbar-nav > li.active .dropdown-menu {
   display: block;
 }
 .navbar-default .navbar-nav > li.active > a {
-  font-weight: bold;
   color: #1f252b;
 }
 .navbar-nav > li > a {
   padding: 0 20px;
   text-transform: uppercase;
   line-height: 70px;
+  font-weight: bold;
 }
 .navbar-default .navbar-nav > li > a {
   color: #888;
+  font-size: 13px;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  color: #1f252b;
+  color: #1f252b !important;
 }
 .navbar-nav > li > a .caret {
   display: none;
@@ -5869,8 +5877,13 @@ button.close {
   position: relative;
   height: 300px;
   background: #31485e;
+  background: url(../img/standard-cover.png);
+  background-size: cover;
   overflow: hidden;
   clear: both;
+}
+.featured-image.no-image::before {
+  background: none;
 }
 .featured-image::before {
   content: "";

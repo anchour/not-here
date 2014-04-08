@@ -39,7 +39,8 @@
          line-height: 50px;
          color:#999;
          text-transform: uppercase;
-         font-size: 13px;
+         font-size: 12px;
+         font-weight: bold;
       }
       > a:hover {
          background: @dark;
@@ -68,10 +69,10 @@
       background-image: url(../img/logo@2x.png);
    }
 }
-
+.page-child .navbar-default .navbar-nav > li > a, .page .navbar-default .navbar-nav > li > a {color:#BBB;}
+.page.home .navbar-default .navbar-nav > li > a {color:#888;}
 .navbar-nav {
    float: right;
-   font-size: 15px;
 
    > li.active {
       .dropdown-menu {
@@ -82,9 +83,7 @@
    > li {
 
       .navbar-default & {
-
          &.active > a {
-            font-weight: bold;
             color: @dark;
          }
       }
@@ -92,14 +91,15 @@
          padding: 0 20px;
          text-transform: uppercase;
          line-height: 70px;
+         font-weight: bold;
 
          .navbar-default & {
             color:#888;
+            font-size: 13px;
 
             &:hover {
-               color: @dark;
+               color: @dark!important;
             }
-
          }
 
          .caret {
@@ -124,6 +124,11 @@
    position: relative;
    height: 300px;
    background: #31485e;
+   background: url(../img/standard-cover.png);
+   background-size:cover;
+   &.no-image::before {
+   background:none;
+   }
 
    &::before {
       content: "";
