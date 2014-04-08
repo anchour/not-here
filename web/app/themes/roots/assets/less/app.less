@@ -319,8 +319,7 @@
 footer {
    background: @footer-bg-color;
    padding-top: 50px;
-   padding-bottom: 50px;
-   min-height: 324px;
+   padding-bottom: 30px;
 
    &, a, a:hover {
       color: #fff;
@@ -329,10 +328,13 @@ footer {
    .utility {
       font-family: @font-family-heading;
       font-size: 20px;
+      font-weight: 100;
       text-transform: uppercase;
-
+      p {
+         padding: 2px 10px;
+         margin: 0;
+      }
       .box {
-         margin-top: 10px;
 
          &.navigation {
             margin-top: 0;
@@ -341,12 +343,21 @@ footer {
    }
 
    // Footer nav styling
-   .nav > li > a:hover {
-      background: lighten(@red, 3%);
-      color: #fff;
+   .nav > li {
+
+      a {
+         padding: 2px 10px;
+      }
+       a:hover {
+         background: lighten(@red, 3%);
+         color: #fff;
+      }
    }
 
    .copyright {
+      display: block;;
+      clear: both;
+      margin-top:70px;
       font-size: 11px;
    }
 }
@@ -428,7 +439,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       margin-top: 18px;
       margin-right: 0;
    }
-   
+
    .page-parent .featured-image {
       margin-top: 0;
    }

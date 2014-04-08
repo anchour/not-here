@@ -6026,8 +6026,7 @@ button.close {
 footer {
   background: #e73e33;
   padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 324px;
+  padding-bottom: 30px;
 }
 footer,
 footer a,
@@ -6037,19 +6036,27 @@ footer a:hover {
 footer .utility {
   font-family: 'Tungsten A', 'Tungsten B';
   font-size: 20px;
+  font-weight: 100;
   text-transform: uppercase;
 }
-footer .utility .box {
-  margin-top: 10px;
+footer .utility p {
+  padding: 2px 10px;
+  margin: 0;
 }
 footer .utility .box.navigation {
   margin-top: 0;
 }
-footer .nav > li > a:hover {
+footer .nav > li a {
+  padding: 2px 10px;
+}
+footer .nav > li a:hover {
   background: #e94b41;
   color: #fff;
 }
 footer .copyright {
+  display: block;
+  clear: both;
+  margin-top: 70px;
   font-size: 11px;
 }
 .aligncenter {
