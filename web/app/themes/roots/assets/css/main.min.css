@@ -5776,9 +5776,34 @@ button.close {
   }
 }
 .navbar {
-  height: 71px;
+  height: 70px;
   margin-bottom: 0;
   border: 0 none;
+  background: #ffffff;
+}
+.nav > li,
+.dropdown {
+  position: static;
+}
+.dropdown-menu {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 0 none;
+  background: #e8e9e9;
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.dropdown-menu > li {
+  display: inline-block;
+}
+.dropdown-menu > li > a {
+  padding: 0 10px;
 }
 .navbar-brand {
   background: url(../img/logo.png) no-repeat left top;
@@ -5813,6 +5838,7 @@ button.close {
   position: relative;
   height: 500px;
   overflow: hidden;
+  clear: both;
 }
 .featured-image .background {
   position: absolute;

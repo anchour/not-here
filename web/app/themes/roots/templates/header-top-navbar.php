@@ -10,10 +10,14 @@
       <a class="navbar-brand" href="<?php echo home_url(); ?>/"></a>
     </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
+    <nav role="navigation">
       <?php
         if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+          wp_nav_menu([
+              'theme_location' => 'primary_navigation',
+              'menu_class' => 'nav navbar-nav',
+              'depth' => 2,
+          ]);
         endif;
       ?>
     </nav>
