@@ -3,27 +3,76 @@
  */
 
 @import "bootstrap/bootstrap";
+@import "mixins.less";
+@import "variables.less";
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
+.navbar {
+   height: 71px;
+   margin-bottom: 0;
+   border: 0 none;
+}
 
-body { }
+.navbar-brand {
+   background: url(../img/logo.png) no-repeat left top;
+   -webkit-background-size: cover;
+   background-size: cover;
+   width: 168px;
+   height: 37px;
+   margin-top: 17px;
+   margin-bottom: 17px;
 
-/* ==========================================================================
-   Header
-   ========================================================================== */
+   @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      background-image: url(../img/logo@2x.png);
+   }
+}
 
-.banner { }
+.navbar-nav {
+   float: right;
 
+   > li {
+      > a {
+         padding: 25px 20px;
+         text-transform: uppercase;
 
-/* ==========================================================================
-   Content
-   ========================================================================== */
+         &:hover,
+         &.active {
+            font-weight: bold;
 
+            .navbar-default & {
+               background: @gray-lighter;
+            }
+         }
+      }
+   }
+}
+
+// Content
 .content { }
 
+// Featured Image Styling
 
+.featured-image {
+   .background {
+      display: block;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+   .page-logo {
+      height: 100%;
+      text-align: center;
+      position: relative;
+
+      padding-top: 10%;
+      padding-bottom: 10%;
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+   }
+}
 
 /* ==========================================================================
    Primary Content
