@@ -36,6 +36,10 @@ bin
 .idea
 .idea/*
 
+# Codekit
+config.codekit
+.codekit-cache
+
 # Plugins
 !web/app/plugins/acf-flexible-content
 !web/app/plugins/gravityforms
