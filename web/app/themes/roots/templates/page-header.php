@@ -12,7 +12,7 @@ $banner = get_field('banner_image');
 
 ?>
 
-<div class="featured-image">
+<div class="featured-image<?php if ( ! $banner) : ?> no-image<?php endif; ?>">
     <?= banner_image($banner); ?>
 
     <div class="table header-content-wrap">
