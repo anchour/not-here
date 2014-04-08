@@ -42,4 +42,5 @@ config.codekit
 
 # Plugins
 !web/app/plugins/acf-flexible-content
+!web/app/plugins/acf-repeater
 !web/app/plugins/gravityforms
