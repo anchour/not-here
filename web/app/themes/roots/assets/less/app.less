@@ -52,20 +52,53 @@
 // Featured Image Styling
 
 .featured-image {
+   position: relative;
+   height: 500px;
+   overflow: hidden;
+
    .background {
+      position: absolute;
+      left: 0;
+      top: 0;
       display: block;
       max-width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      z-index: 0;
    }
+   
+   .content {
+      display: block;
+      height: 100%;
+      width: 100%;
+   }
+   .header-content-wrap {
+      position: relative;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+   }
+   .header-content {
+      text-align: center;
+      vertical-align: middle;
+   }
+
+   .table {
+      display: table;
+   }
+   .cell {
+      display: table-cell;
+   }
+
    .page-logo {
       height: 100%;
       text-align: center;
-      position: relative;
-
-      padding-top: 10%;
-      padding-bottom: 10%;
+      width: 100%;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
 
       img {
          max-width: 100%;

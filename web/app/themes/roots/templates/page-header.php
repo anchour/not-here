@@ -15,12 +15,14 @@ $headerImage = get_field('header_image');
     <?= banner_image($background); ?>
     <?php if (false !== $headerImage): ?>
 
-        <div class="page-logo">
-            <?php if (is_front_page()) : ?>
-                <img src="<?php echo $headerImage['url']; ?>" alt="<?php the_title(); ?>" width="<?php echo $headerImage['width'] / 2; ?>" height="<?php echo $headerImage['height'] / 2; ?>">
-            <?php else: ?>
-                <?php the_title(); ?>
-            <?php endif; ?>
+        <div class="table header-content-wrap">
+            <div class="cell header-content">
+                <?php if (is_front_page()) : ?>
+                    <img src="<?php echo $headerImage['url']; ?>" alt="<?php the_title(); ?>" width="<?php echo $headerImage['width'] / 2; ?>" height="<?php echo $headerImage['height'] / 2; ?>">
+                <?php else: ?>
+                    <?php the_title(); ?>
+                <?php endif; ?>
+            </div>
         </div>
 
     <?php endif; ?>
