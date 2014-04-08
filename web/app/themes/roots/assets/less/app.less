@@ -22,7 +22,7 @@
 
 .dropdown-menu {
    width: 100%;
-   height: 60px;
+   height: 50px;
    text-align: center;
    border: 0 none;
    background: @gray-lighter;
@@ -36,8 +36,22 @@
 
       > a {
          padding: 0 15px;
-         line-height: 60px;
+         line-height: 50px;
+         color:#999;
+         text-transform: uppercase;
+         font-size: 13px;
       }
+      > a:hover {
+         background: @dark;
+         background:none;
+      }
+   }
+
+   > .active > a, > .active > a:hover {
+      background:#F9f9f9;
+      color:@dark;
+      height: 52px;
+      box-shadow: 0 2px 2px rgba(0,0,0,0.2);
    }
 }
 
@@ -66,30 +80,32 @@
    }
 
    > li {
+
+      .navbar-default & {
+
+         &.active > a {
+            font-weight: bold;
+            color: @dark;
+         }
+      }
       > a {
          padding: 0 20px;
          text-transform: uppercase;
          line-height: 70px;
 
+         .navbar-default & {
+            color:#888;
+
+            &:hover {
+               color: @dark;
+            }
+
+         }
+
          .caret {
             display: none;
          }
 
-         &:hover,
-         &.active {
-            font-weight: bold;
-
-            .navbar-default & {
-               background: @gray-lighter;
-            }
-         }
-      }
-
-      &.open,
-      &.active {
-         > a {
-            font-weight: bold;
-         }
       }
    }
 
@@ -165,11 +181,17 @@
       color: #fff;
       text-align: center;
       vertical-align: middle;
+
+      h1 {font-weight: bold;}
+      .sub-heading {
+         font-size: 20px;
+         margin: 0 auto;
+         font-weight: 200;
+         max-width: 70%;
+      }
+
    }
 
-   .sub-heading {
-      font-size: 20px;
-   }
 
    .table {
       display: table;
@@ -319,34 +341,51 @@
 footer {
    background: @footer-bg-color;
    padding-top: 50px;
-   padding-bottom: 30px;
+   padding-bottom: 60px;
 
    &, a, a:hover {
       color: #fff;
    }
 
    .utility {
-      font-family: @font-family-heading;
+      font-family: @font-family-sans-serif;
       font-size: 20px;
       font-weight: 100;
       text-transform: uppercase;
       p {
-         padding: 2px 10px;
+         padding: 2px 0px;
+         text-transform: lowercase;
+         font-size: 16px;
          margin: 0;
       }
-      .box {
 
+      .heading {
+         font-family: @font-family-sans-serif;
+         text-transform: lowercase;
+         font-weight: bold;
+         font-size: 16px;
+      }
+      .box {
          &.navigation {
             margin-top: 0;
          }
       }
+
+      .copyright, .copyright p {
+         display: block;
+         text-transform: uppercase;
+         font-size: 12px;
+      }
+
    }
 
    // Footer nav styling
    .nav > li {
 
       a {
-         padding: 2px 10px;
+         padding: 2px 0px;
+         text-transform: lowercase;
+         font-size: 16px;
       }
        a:hover {
          background: lighten(@red, 3%);
@@ -354,12 +393,6 @@ footer {
       }
    }
 
-   .copyright {
-      display: block;;
-      clear: both;
-      margin-top:70px;
-      font-size: 11px;
-   }
 }
 
 
