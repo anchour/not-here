@@ -11,6 +11,7 @@
    margin-bottom: 0;
    border: 0 none;
    background: #ffffff;
+   padding: 0 20px;
 }
 
 .nav > li,
@@ -99,8 +100,25 @@
    position: relative;
    height: 300px;
 
+   &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 5;
+   }
+
    .home & {
+      &::before {
+         display: none;
+      }
       height: 500px;
+   }
+
+   .page-parent & {
+      margin-top: 60px;
    }
 
    overflow: hidden;
@@ -131,8 +149,13 @@
       width: 100%;
    }
    .header-content {
+      color: #fff;
       text-align: center;
       vertical-align: middle;
+   }
+
+   .sub-heading {
+      font-size: 20px;
    }
 
    .table {
@@ -156,7 +179,7 @@
       }
    }
 
-   @media screen and (max-width: 1300px) {
+   @media screen and (max-width: 1400px) {
       .background {
          max-width: none;
          height: 100%;
@@ -304,6 +327,30 @@ footer {
 
    &, a {
       color: #fff;
+   }
+   
+   .utility {
+      font-family: @font-family-heading;
+      font-size: 20px;
+      text-transform: uppercase;
+
+      .box {
+         margin-top: 10px;
+
+         &.navigation {
+            margin-top: 0;
+         }
+      }
+   }
+
+   // Footer nav styling
+   .nav > li > a:hover {
+      background: lighten(@red, 3%);
+      color: #fff;
+   }
+
+   .copyright {
+      font-size: 11px;
    }
 }
 

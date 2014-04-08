@@ -6,24 +6,27 @@
  * @author  Matt Robitaille <matt@anchour.com>
  */
 
-$background  = get_field('background_image');
-$headerImage = get_field('header_image');
+$heading = get_field('heading');
+$sub_heading = get_field('sub_heading');
+$banner = get_field('banner_image');
 
 ?>
 
 <div class="featured-image">
-    <?= banner_image($background); ?>
-    <?php if (false !== $headerImage): ?>
+    <?= banner_image($banner); ?>
 
-        <div class="table header-content-wrap">
-            <div class="cell header-content">
-                <?php if (is_front_page()) : ?>
-                    <img src="<?php echo $headerImage['url']; ?>" alt="<?php the_title(); ?>" width="<?php echo $headerImage['width'] / 2; ?>" height="<?php echo $headerImage['height'] / 2; ?>">
-                <?php else: ?>
-                    <?php the_title(); ?>
+    <div class="table header-content-wrap">
+        <div class="cell header-content">
+            <div class="container">
+                <h1><?= get_acf_title(); ?></h1>
+
+                <?php if ($sub_heading) : ?>
+                    <div class="sub-heading">
+                        <?= $sub_heading; ?>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>
+    </div>
 
-    <?php endif; ?>
 </div>

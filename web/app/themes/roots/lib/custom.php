@@ -23,3 +23,11 @@ function get_image($image = array())
     return $image['url'];
 }
 add_filter('roots_root_relative_url', 'get_image');
+
+function get_acf_title()
+{
+    if ( $title = get_field('heading') )
+        return $title;
+
+    return get_the_title();
+}

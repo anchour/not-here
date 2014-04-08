@@ -8,6 +8,6 @@
  * @author  Matt Robitaille <matt@anchour.com>
  * @package Not Here
  */
-get_template_part('templates/page', 'header');
+get_template_part('templates/page', 'header-home');
 get_template_part('templates/content', 'main-content');
 get_template_part('templates/content', 'page');
