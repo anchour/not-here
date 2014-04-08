@@ -1,0 +1,53 @@
+// ! Page styling
+
+.page-main-content {
+	background: @main-content-bg-color url(images/top-pattern.png);
+	padding-top: 120px;
+	padding-bottom: 120px;
+	position: relative;
+
+	h1 {
+		font-weight: 200;
+		font-family: 'Tungsten A', 'Tungsten B';
+		text-transform: uppercase;
+
+		font-size: 2.65em;
+		text-align: center;
+
+		strong,
+		b {
+			font-weight: 600;
+		}
+	}
+
+	p {
+		text-align: center;
+		letter-spacing: 2px;
+
+		color: #727272;
+	}
+
+	.register-cta {
+		position: absolute;
+		height: 47px;
+		line-height: 47px;
+		background: #e73e33;
+
+		top: -23px;left: 50%;
+		-webkit-transform: translate(-50%, 0);
+
+		.border-radius(5px);
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 0 30px;
+		margin: 0;
+		border: 0 none;
+
+		box-shadow: 0 1px 0 0 rgba(255,255,255,0.4) inset, 0 0 40px 0 rgba(0,0,0,0.1);
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

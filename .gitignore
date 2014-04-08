@@ -31,3 +31,11 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+# IDE
+.idea
+.idea/*
+
+# Plugins
+!web/app/plugins/acf-flexible-content
+!web/app/plugins/gravityforms
