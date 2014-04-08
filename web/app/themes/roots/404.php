@@ -1,4 +1,4 @@
-<div class="featured-image">
+<div class="featured-image no-image">
     <div class="table header-content-wrap">
         <div class="cell header-content">
             <div class="container">
