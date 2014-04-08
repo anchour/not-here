@@ -5788,7 +5788,6 @@ button.close {
 .dropdown-menu {
   width: 100%;
   height: 60px;
-  line-height: 60px;
   text-align: center;
   border: 0 none;
   background: #e8e9e9;
@@ -5803,7 +5802,8 @@ button.close {
   display: inline-block;
 }
 .dropdown-menu > li > a {
-  padding: 0 10px;
+  padding: 0 15px;
+  line-height: 60px;
 }
 .navbar-brand {
   background: url(../img/logo.png) no-repeat left top;
@@ -5822,9 +5822,15 @@ button.close {
 .navbar-nav {
   float: right;
 }
+.navbar-nav > li.active .dropdown-menu {
+  display: block;
+}
 .navbar-nav > li > a {
   padding: 25px 20px;
   text-transform: uppercase;
+}
+.navbar-nav > li > a .caret {
+  display: none;
 }
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a.active {
@@ -5834,11 +5840,18 @@ button.close {
 .navbar-default .navbar-nav > li > a.active {
   background: #e8e9e9;
 }
+.navbar-nav > li.open > a,
+.navbar-nav > li.active > a {
+  font-weight: bold;
+}
 .featured-image {
   position: relative;
-  height: 500px;
+  height: 300px;
   overflow: hidden;
   clear: both;
+}
+.home .featured-image {
+  height: 500px;
 }
 .featured-image .background {
   position: absolute;
@@ -5869,27 +5882,114 @@ button.close {
 }
 .featured-image .table {
   display: table;
+  margin-bottom: 0;
 }
 .featured-image .cell {
   display: table-cell;
 }
 .featured-image .page-logo {
   height: 100%;
+  text-align: center;
   width: 100%;
   display: table-cell;
   vertical-align: middle;
-  text-align: center;
 }
 .featured-image .page-logo img {
   max-width: 100%;
   height: auto;
 }
-/* ==========================================================================
-   Primary Content
-   ========================================================================== */
+@media screen and (max-width: 1300px) {
+  .featured-image .background {
+    max-width: none;
+    height: 100%;
+  }
+}
+.page-main-content {
+  background: #e5e5e5 url(../img/top-pattern.png);
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+}
+.page-main-content h1 {
+  font-weight: 200;
+  font-family: 'Tungsten A', 'Tungsten B';
+  text-transform: uppercase;
+  font-size: 2.65em;
+  text-align: center;
+}
+.page-main-content h1 strong,
+.page-main-content h1 b {
+  font-weight: 600;
+}
+.page-main-content p {
+  text-align: center;
+  letter-spacing: 2px;
+  color: #727272;
+}
+.page-main-content .register-cta {
+  position: absolute;
+  height: 47px;
+  line-height: 47px;
+  background: #e73e33;
+  top: -23px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 30px;
+  margin: 0;
+  border: 0 none;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.4) inset, 0 0 40px 0 rgba(0, 0, 0, 0.1);
+}
+.page-main-content .register-cta:focus {
+  outline: none;
+}
 /* Gallery Shortcode */
 .gallery-row {
   padding: 15px 0;
+}
+.section {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.section .section-title {
+  font-weight: 600;
+  font-size: 2.6em;
+  line-height: 1;
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e73e33;
+}
+.section .section-content {
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+.section.dark {
+  background: #262a2e;
+}
+.section.dark .section-content {
+  color: #a8aaab;
+}
+.section.light {
+  background: #ffffff;
+}
+.section.light .section-content {
+  color: #e73e33;
+}
+.section .col {
+  text-align: center;
+}
+.section .col img {
+  max-width: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 /* ==========================================================================
    Sidebar
@@ -5900,6 +6000,16 @@ button.close {
 /* ==========================================================================
    Footer
    ========================================================================== */
+footer {
+  background: #e73e33;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 324px;
+}
+footer,
+footer a {
+  color: #fff;
+}
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
