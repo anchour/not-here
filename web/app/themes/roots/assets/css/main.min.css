@@ -6031,8 +6031,7 @@ button.close {
   color: #e73e33;
 }
 .section .section-content {
-  font-weight: 200;
-  letter-spacing: 1px;
+  font-weight: normal;
   line-height: 1.6;
 }
 .section.dark {
@@ -6045,7 +6044,7 @@ button.close {
   background: #ffffff;
 }
 .section.light .section-content {
-  color: #e73e33;
+  color: #353534;
 }
 .section .col {
   text-align: center;
