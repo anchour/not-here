@@ -52,9 +52,30 @@ function get_acf_title()
     return get_the_title();
 }
 
+/**
+ * Check whether both the title and url exist for the CTA button.
+ *
+ * @param string $title
+ * @param string $url
+ * @return bool
+ */
 function has_cta_components($title, $url)
 {
     return strlen($title) > 0 && strlen($url) > 0;
+}
+
+/**
+ * Get the col count. Min count will be 1 as defined by the ACF field,
+ * max count is 4 as defined by the ACF field.
+ *
+ * @param int $count
+ * @return float
+ */
+function get_col_class($count = 1)
+{
+    $count = 12 / $count;
+
+    return "col col-md-{$count}";
 }
 
 // Donors-specific functions

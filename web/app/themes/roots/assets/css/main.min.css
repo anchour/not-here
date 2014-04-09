@@ -6307,14 +6307,19 @@ fieldset[disabled] .gform_footer input[type=submit].active {
 .section.light .section-content {
   color: #444444;
 }
-.section .col {
-  text-align: center;
+.section .col h3 {
+  font-family: "Tungsten A", "Tungsten B";
+  color: #e73e33;
+  text-transform: uppercase;
 }
 .section .col img {
   max-width: 100%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+.section .col .col-content {
+  font-size: 17px;
 }
 footer {
   background: #e73e33;
