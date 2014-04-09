@@ -553,11 +553,34 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 // Donors
 .donor {
-font-size: 14px;
-color:@grey-medium;
+   font-size: 14px;
+   color: @grey-medium;
 
-.front {border-radius: 1000px;overflow: hidden;display: block;width:25%;float: left;}
+   &.lead {
+      .front {
+         width: 50%;
+      }
+   }
 
-.donor-name {font-weight: bold;font-size: 18px;color: @dark;}
+   .front {
+      border-radius: 1000px;
+      overflow: hidden;
+      display: block;
+      width: 50%;
+      margin-right: 6%;
+      height: auto;
+      float: left;
+   }
 
+   img {
+      display: block;
+      width: 100%;
+      height: auto;
+   }
+
+   .donor-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: @dark;
+   }
 }

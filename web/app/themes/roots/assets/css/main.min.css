@@ -6361,12 +6361,22 @@ figure.alignnone {
   font-size: 14px;
   color: #999999;
 }
+.donor.lead .front {
+  width: 50%;
+}
 .donor .front {
   border-radius: 1000px;
   overflow: hidden;
   display: block;
-  width: 25%;
+  width: 50%;
+  margin-right: 6%;
+  height: auto;
   float: left;
+}
+.donor img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .donor .donor-name {
   font-weight: bold;
