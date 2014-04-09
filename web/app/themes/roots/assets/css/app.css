@@ -6357,19 +6357,6 @@ figure.alignnone {
     font-size: 16px;
   }
 }
-.donor {
-  font-size: 14px;
-  color: #999999;
-}
-.donor .front {
-  border-radius: 1000px;
-  overflow: hidden;
-  display: block;
-  width: 25%;
-  float: left;
-}
 .donor .donor-name {
   font-weight: bold;
-  font-size: 18px;
-  color: #1f252b;
 }
