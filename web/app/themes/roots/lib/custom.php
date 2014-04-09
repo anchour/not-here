@@ -3,6 +3,13 @@
  * Custom functions
  */
 
+function get_asset($url)
+{
+    $url = get_template_directory_uri() . $url;
+
+    return roots_root_relative_url($url);
+}
+
 /**
  * Get the banner image if it exists.
  *
@@ -26,9 +33,10 @@ function banner_image($field = [])
  */
 function get_image($image = array())
 {
+    $image['url'] = roots_root_relative_url($image['url']);
+
     return $image['url'];
 }
-add_filter('roots_root_relative_url', 'get_image');
 
 /**
  * Gets the title for the page header if it's set within the ACF field.
