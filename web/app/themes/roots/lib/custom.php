@@ -53,6 +53,53 @@ function get_acf_title()
 }
 
 // Donors-specific functions
+
+/**
+ * Sorts the donors based on their priority level.
+ *
+ * @param array $donors
+ * @return array
+ */
+function sort_donors_by_type( array $donors)
+{
+    $priority = [
+        'lead'     => [],
+        'warrior'  => [],
+        'guardian' => [],
+        'founding' => [],
+        'other'    => []
+    ];
+
+    if ( count($donors) > 0 ) {
+        foreach ($donors as $donor) {
+            $priority[$donor['donor_level']][] = $donor;
+        }
+    }
+
+    return $priority;
+}
+
+function get_donor_class($type = '')
+{
+    if ( ! strlen($type) === 0 ) return '';
+
+    if ( $type == 'lead' )
+        return "donor donor-lead col-md-6 col-sm-6";
+
+    if ( $type == 'warrior' )
+        return "donor donor-warrior col-md-4 col-sm-4";
+
+    if ( $type == 'guardian' )
+        return "donor donor-guardian col-md-4 col-sm-4";
+
+    if ( $type == 'founding' )
+        return "donor donor-founding col-md-4 col-sm-4";
+
+    if ( $type == 'other' )
+        return "donor donor-other col-md-4 col-sm-4";
+
+}
+
 /**
  * Formats the url for the donor website to append an http:// to the
  * front of it if the user didn't add that in on the donor page.
@@ -79,14 +126,18 @@ function format_readable_url($url)
  * Gets the appropriate image size for the donor logo
  * and returns it as an image string.
  *
- * @param $image_id
+ * @param array $donor
  * @return string
  */
-function get_donor_logo($image_id)
+function get_donor_logo(array $donor)
 {
-    if ( ! $image_id) return '';
+    if ( count($donor) === 0 || ! array_key_exists('donor_logo', $donor) )
+        return '';
 
-    $src = wp_get_attachment_image_src($image_id, 'donor_logo' );
+    // Get the full size image if the donor level is the lead.
+    $size = $donor['donor_level'] == 'lead' ? '' : 'donor_logo';
+
+    $src = wp_get_attachment_image_src($donor['donor_logo'], $size );
 
     return HTMLBuilder::image($src, '', ['class' => 'donor-logo']);
 }

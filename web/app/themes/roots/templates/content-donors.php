@@ -3,14 +3,27 @@
 
     <?php if ( is_array($donors) && count($donors) > 0 ): $count = 0; ?>
 
-        <div class="section light">
-            <div class="container">
+        <?php $levels = sort_donors_by_type($donors); unset($donors); ?>
+
+
+        <?php foreach($levels as $type => $donors) : ?>
+            <div class="section donor-section light">
+
                 <div class="row">
-                    <?php foreach($donors as $donor) : ?>
-                        <div class="donor col-md-6 col-sm-4 col-xs-2">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <h2 class="text-center"><?= ucwords($type); ?></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <?php foreach($donors as $donor): ?>
+                <div class="row">
+                    <div class="container">
+                        <div class="<?= get_donor_class($type); ?>">
 
                             <div class="front">
-                                <?= get_donor_logo($donor['donor_logo']); ?>
+                                <?= get_donor_logo($donor); ?>
                             </div>
                             <div class="back">
                                 <span class="donor-name">
@@ -27,10 +40,14 @@
                             </div>
 
                         </div>
-                    <?php endforeach; ?>
+                    </div>
                 </div>
+                <?php endforeach; ?>
+
             </div>
-        </div>
+
+        <?php endforeach; ?>
+
 
     <?php endif; ?>
 <?php endwhile; ?>
