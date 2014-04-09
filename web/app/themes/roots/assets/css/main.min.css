@@ -2023,6 +2023,7 @@ select[multiple].input-lg {
   right: 15px;
 }
 .btn,
+.btn-red,
 .gform_footer input[type=submit],
 .gform_footer input[type=submit]:hover,
 .gform_footer input[type=submit]:focus,
@@ -5969,6 +5970,89 @@ button.close {
   -webkit-transition: 100ms linear all;
   transition: 100ms linear all;
 }
+.btn-red,
+.gform_footer input[type=submit],
+.gform_footer input[type=submit]:hover,
+.gform_footer input[type=submit]:focus,
+.gform_footer input[type=submit]:active,
+.gform_footer input[type=submit].active,
+.open .dropdown-toggle.gform_footer input[type=submit],
+.gform_footer input[type=submit]:active,
+.gform_footer input[type=submit].active,
+.open .dropdown-toggle.gform_footer input[type=submit],
+.gform_footer input[type=submit].disabled,
+.gform_footer input[type=submit][disabled],
+fieldset[disabled] .gform_footer input[type=submit],
+.gform_footer input[type=submit].disabled,
+.gform_footer input[type=submit][disabled],
+fieldset[disabled] .gform_footer input[type=submit],
+.gform_footer input[type=submit].disabled:hover,
+.gform_footer input[type=submit][disabled]:hover,
+fieldset[disabled] .gform_footer input[type=submit]:hover,
+.gform_footer input[type=submit].disabled:focus,
+.gform_footer input[type=submit][disabled]:focus,
+fieldset[disabled] .gform_footer input[type=submit]:focus,
+.gform_footer input[type=submit].disabled:active,
+.gform_footer input[type=submit][disabled]:active,
+fieldset[disabled] .gform_footer input[type=submit]:active,
+.gform_footer input[type=submit].disabled.active,
+.gform_footer input[type=submit][disabled].active,
+fieldset[disabled] .gform_footer input[type=submit].active,
+.gform_footer input[type=submit],
+.gform_footer input[type=submit]:hover {
+  color: #ffffff;
+  background-color: #e73e33;
+  border-color: #cf2318;
+  display: block;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active,
+.btn-red.active,
+.open .dropdown-toggle.btn-red {
+  color: #ffffff;
+  background-color: #d82519;
+  border-color: #981a12;
+}
+.btn-red:active,
+.btn-red.active,
+.open .dropdown-toggle.btn-red {
+  background-image: none;
+}
+.btn-red.disabled,
+.btn-red[disabled],
+fieldset[disabled] .btn-red,
+.btn-red.disabled:hover,
+.btn-red[disabled]:hover,
+fieldset[disabled] .btn-red:hover,
+.btn-red.disabled:focus,
+.btn-red[disabled]:focus,
+fieldset[disabled] .btn-red:focus,
+.btn-red.disabled:active,
+.btn-red[disabled]:active,
+fieldset[disabled] .btn-red:active,
+.btn-red.disabled.active,
+.btn-red[disabled].active,
+fieldset[disabled] .btn-red.active {
+  background-color: #e73e33;
+  border-color: #cf2318;
+}
+.btn-red .badge {
+  color: #e73e33;
+  background-color: #ffffff;
+}
+.btn-cta {
+  margin-top: 20px;
+}
+.text-light {
+  font-weight: 200;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
 .featured-image {
   position: relative;
   height: 300px;
@@ -6073,7 +6157,7 @@ button.close {
 }
 .page-main-content h1 {
   font-weight: 200;
-  font-family: 'Tungsten A', 'Tungsten B';
+  font-family: "Gotham A", "Gotham B", sans-serif;
   text-transform: uppercase;
   font-size: 2.65em;
   text-align: center;
@@ -6133,6 +6217,7 @@ button.close {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: none;
   min-width: 50%;
 }
 .gform_footer input[type=submit]:hover,
@@ -6222,14 +6307,19 @@ fieldset[disabled] .gform_footer input[type=submit].active {
 .section.light .section-content {
   color: #444444;
 }
-.section .col {
-  text-align: center;
+.section .col h3 {
+  font-family: "Tungsten A", "Tungsten B";
+  color: #e73e33;
+  text-transform: uppercase;
 }
 .section .col img {
   max-width: 100%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+.section .col .col-content {
+  font-size: 17px;
 }
 footer {
   background: #e73e33;
@@ -6300,11 +6390,7 @@ figure.alignnone {
     padding: 20px 0;
   }
   footer .utility .box {
-    padding: 10px 30px;
-  }
-  footer .utility .box.navigation {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 15px;
   }
 }
 @media screen and (max-width: 767px) {
