@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "dc02d0964716dca9904bd9a152a14e6c",
+    "hash": "21a3a657a9597a4947c3e24424b4cfc2",
     "packages": [
         {
             "name": "composer/installers",
@@ -190,29 +190,6 @@
                 "fancyguy/webroot-installer": "1.1.0"
             },
             "type": "webroot"
-        },
-        {
-            "name": "wpackagist-plugin/addthis",
-            "version": "3.5.9",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/addthis/",
-                "reference": "tags/3.5.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/addthis.3.5.9.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "replace": {
-                "wpackagist/addthis": "self.version"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/addthis/"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
