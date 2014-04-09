@@ -61,7 +61,6 @@
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
     "wpackagist-plugin/better-wp-security" : "4.0.19",
-    "wpackagist-plugin/addthis" : "3.5.9",
     "wpackagist-plugin/advanced-custom-fields" : "4.3.5",
     "wpackagist-plugin/wordpress-seo": "1.5.2.6",
     "wpackagist-plugin/wordpress-importer": "0.6.1"
