@@ -1,13 +1,25 @@
-<?php get_template_part('templates/page', 'header'); ?>
-
-<div class="alert alert-warning">
-  <?php _e('Sorry, but the page you were trying to view does not exist.', 'roots'); ?>
+<div class="featured-image no-image">
+    <div class="table header-content-wrap">
+        <div class="cell header-content">
+            <div class="container">
+                <h1>404!</h1>
+            </div>
+        </div>
+    </div>
 </div>
 
-<p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
-<ul>
-  <li><?php _e('a mistyped address', 'roots'); ?></li>
-  <li><?php _e('an out-of-date link', 'roots'); ?></li>
-</ul>
+<div class="section light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <p>
+                    <?php _e('Sorry! The page you\'re looking for doesn\'t exist!', 'roots'); ?>
+                </p>
 
-<?php get_search_form(); ?>
+                <p>
+                    <a href="<?php bloginfo('url'); ?>"><?php _e('Return to the home page.'); ?></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
