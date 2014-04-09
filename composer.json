@@ -42,7 +42,7 @@
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
-        "version": "3.8.1",
+        "version": "3.8.2",
         "type": "webroot",
         "dist": {
           "type": "zip",
@@ -56,11 +56,11 @@
   ],
   "require": {
     "php": ">=5.3.2",
-    "wordpress/wordpress": "3.8.1",
+    "wordpress/wordpress": "3.8.2",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "~1.0.6",
-    "wpackagist-plugin/better-wp-security" : "4.0.18",
+    "wpackagist-plugin/better-wp-security" : "4.0.19",
     "wpackagist-plugin/addthis" : "3.5.9",
     "wpackagist-plugin/advanced-custom-fields" : "4.3.5",
     "wpackagist-plugin/wordpress-seo": "1.5.2.6",

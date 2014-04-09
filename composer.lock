@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0ba7d65876e76e6c0929cf3838f142e5",
+    "hash": "dc02d0964716dca9904bd9a152a14e6c",
     "packages": [
         {
             "name": "composer/installers",
@@ -179,7 +179,7 @@
         },
         {
             "name": "wordpress/wordpress",
-            "version": "3.8.1",
+            "version": "3.8.2",
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/WordPress/WordPress/archive/3.8.1.zip",
@@ -239,15 +239,15 @@
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
-            "version": "4.0.18",
+            "version": "4.0.19",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/better-wp-security/",
-                "reference": "tags/4.0.18"
+                "reference": "tags/4.0.19"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/better-wp-security.4.0.18.zip",
+                "url": "http://downloads.wordpress.org/plugin/better-wp-security.4.0.19.zip",
                 "reference": null,
                 "shasum": null
             },
