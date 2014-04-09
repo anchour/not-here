@@ -14,14 +14,14 @@ $button_url  = get_field('button_url');
 
 ?>
 
-<div class="featured-image">
+<div class="featured-image<?php if (false === $background) : ?> no-image<?php endif; ?>">
     <?= banner_image($background); ?>
     <?php if (false !== $headerImage): ?>
 
         <div class="table header-content-wrap">
             <div class="cell header-content">
                 <?php if (is_front_page()) : ?>
-                    <img src="<?php echo $headerImage['url']; ?>" alt="<?php the_title(); ?>" width="<?php echo $headerImage['width'] / 2; ?>" height="<?php echo $headerImage['height'] / 2; ?>">
+                    <img src="<?= roots_root_relative_url($headerImage['url']); ?>" alt="<?php the_title(); ?>" width="<?= $headerImage['width'] / 2; ?>" height="<?= $headerImage['height'] / 2; ?>">
                 <?php else: ?>
                     <?php the_title(); ?>
                 <?php endif; ?>

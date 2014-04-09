@@ -146,9 +146,6 @@
    background: #31485e;
    background: url(../img/standard-cover.png);
    background-size:cover;
-   &.no-image::before {
-   background:none;
-   }
 
    &::before {
       content: "";
@@ -158,6 +155,11 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
       z-index: 5;
+   }
+
+   &.no-image::before {
+      display: none;
+      background:none;
    }
 
    .home & {
@@ -207,6 +209,16 @@
       color: #fff;
       text-align: center;
       vertical-align: middle;
+      padding: 0 20px;
+
+      img {
+         max-width: 100%;
+         height: auto;
+
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+      }
 
       h1 {font-weight: bold;}
       .sub-heading {
@@ -512,8 +524,18 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 // 767px
 @media screen and (max-width: (@screen-sm - 1)) {
 
+   .page-main-content {
+      h1 {
+         font-size: 1.5em;
+      }
+   }
+
    .section {
-      padding: 10px;
+      padding: 30px 10px;
+
+      .section-title {
+         font-size: 1.35em;
+      }
    }
 
    .nav > li,

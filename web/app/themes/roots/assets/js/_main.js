@@ -28,7 +28,28 @@ var Roots = {
   // Home page
   home: {
     init: function() {
-      // JavaScript to be fired on the home page
+
+        (function() {
+            var header_content, header_content_wrap, image;
+
+            header_content_wrap = $('.header-content-wrap');
+            header_content = header_content_wrap.children('.header-content');
+            image = header_content_wrap.find('img');
+
+            $(window).on('resize load', function() {
+                var w = image.attr('width');
+                var width = $(this).width();
+
+                if ($(this).width() <= w) {
+                    header_content_wrap.css('width', width);
+                    header_content.css('width', width);
+                } else {
+                    header_content_wrap.css('width', '100%');
+                    header_content.css('width', '100%');
+                }
+            });
+        })();
+
     }
   },
   // About us page, note the change from about-us to about_us.
