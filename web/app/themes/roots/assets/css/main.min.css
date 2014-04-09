@@ -6047,6 +6047,12 @@ fieldset[disabled] .btn-red.active {
 .btn-cta {
   margin-top: 20px;
 }
+.text-light {
+  font-weight: 200;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
 .featured-image {
   position: relative;
   height: 300px;

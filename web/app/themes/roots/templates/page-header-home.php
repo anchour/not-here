@@ -27,7 +27,7 @@ $button_url  = get_field('button_url');
                 <?php endif; ?>
 
                 <?php if (has_cta_components($button_text, $button_url)): ?>
-                    <a class="btn btn-red btn-cta" href="<?= roots_root_relative_url($button_url); ?>">
+                    <a class="btn btn-red btn-cta text-uppercase text-light" href="<?= roots_root_relative_url($button_url); ?>">
                         <?= $button_text; ?>
                     </a>
                 <?php endif; ?>
