@@ -44,3 +44,4 @@ config.codekit
 !web/app/plugins/acf-flexible-content
 !web/app/plugins/acf-repeater
 !web/app/plugins/gravityforms
+!web/app/plugins/gravityformspaypal
