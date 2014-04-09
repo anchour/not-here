@@ -52,6 +52,11 @@ function get_acf_title()
     return get_the_title();
 }
 
+function has_cta_components($title, $url)
+{
+    return strlen($title) > 0 && strlen($url) > 0;
+}
+
 // Donors-specific functions
 
 /**
