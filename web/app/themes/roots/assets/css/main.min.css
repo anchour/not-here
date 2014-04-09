@@ -6379,11 +6379,7 @@ figure.alignnone {
     padding: 20px 0;
   }
   footer .utility .box {
-    padding: 10px 30px;
-  }
-  footer .utility .box.navigation {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 10px 15px;
   }
 }
 @media screen and (max-width: 767px) {
