@@ -41,10 +41,11 @@ var Roots = {
                 var width = $(this).width();
 
                 if ($(this).width() <= w) {
-                    header_content_wrap.css('width', width);
+
+                    header_content_wrap.addClass('shrink').css('width', width);
                     header_content.css('width', width);
                 } else {
-                    header_content_wrap.css('width', '100%');
+                    header_content_wrap.removeClass('shrink').css('width', '100%');
                     header_content.css('width', '100%');
                 }
             });

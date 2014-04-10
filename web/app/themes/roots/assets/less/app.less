@@ -230,6 +230,19 @@
 
    }
 
+   // Fixes an issue in Firefox, where the max-width set on the image doesn't scale down the image properly on mobile sizes.
+   // This is due to how Firefox interprets the width of an element in relation to its parent - the parent element
+   // needs to have a fixed with instead of just a max width; otherwise, the image won't scale properly. I
+   // added a shrink class within the Javascript to the .header-content-wrap element so this works.
+   .header-content-wrap.shrink{
+      .header-content {
+         img {
+            width: 100%;
+         }
+      }
+   }
+
+
 
    .table {
       display: table;
