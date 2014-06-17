@@ -40,6 +40,9 @@ bin
 config.codekit
 .codekit-cache
 
+# DS Store
+.DS_Store
+
 # Plugins
 !web/app/plugins/acf-flexible-content
 !web/app/plugins/acf-repeater
