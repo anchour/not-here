@@ -20,6 +20,9 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 !web/app/mu-plugins/register-theme-directory.php
+web/app/cache
+web/app/wp-cache-config.php
+web/app/advanced-cache.php
 
 # Vendor (e.g. Composer)
 vendor/*

@@ -1,5 +1,7 @@
 <?php
 //The entry below were created by iThemes Security to disable the file editor
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/home/forge/nothere.me/web/app/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define( 'DISALLOW_FILE_EDIT', true );
 
 /**
